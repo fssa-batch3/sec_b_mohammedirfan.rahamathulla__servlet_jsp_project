@@ -41,7 +41,7 @@ public class CreateTurfServlet extends HttpServlet {
 		TurfService turfService = new TurfService();
 		try {
 			turfService.create(turf);
-			response.sendRedirect("turf_list.jsp");
+			response.sendRedirect("turf_details");
 			System.out.println("Turf is successfully created");
 		} catch (ValidationException e) {
 			e.printStackTrace();

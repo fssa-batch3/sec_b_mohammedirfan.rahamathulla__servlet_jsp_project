@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add Turf</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -56,9 +56,10 @@
 </style>
 </head>
 <body>
+<h1>Add Turf Details</h1>
 <div class="form-container">
     <form action="add_turf" method="POST">
-        <label for="name">Name</label>
+        <label for="name">Turf Name</label>
         <input type="text" id="name" name="name" required>
         
         <label for="address">Address</label>

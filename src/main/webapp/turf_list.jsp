@@ -44,11 +44,11 @@
             <th>City</th>
             <th>Opening Hours</th>
             <th>Closing Hours</th>
-            <th>Update</th>
-            <th>Delete</th>
         </tr>
         <%
+        if(turfSet != null){
         for (Turf turf : turfSet) {
+        
         %>
         <tr>
             <td><%= turf.getId() %></td>
@@ -58,14 +58,9 @@
             <td><%= turf.getCity() %></td>
             <td><%= turf.getOpeningHours() %></td>
             <td><%= turf.getClosingHours() %></td>
-            <td>
-            	<button><a href="turf/edit?id=<%=turf.getId() %>">Update</a></button>
-            </td>
-            <td>
-            	<button><a href="turf/delete?id=<%=turf.getId() %>">Delete</a></button>
-            </td>
         </tr>
         <%
+        }
         }
         %>
     </table>

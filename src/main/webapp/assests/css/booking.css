@@ -1,0 +1,96 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2{
+    margin-left: 600px;
+    color: gray;
+    font-weight: bold;
+    font-size: 25px;
+}
+div.box1 h3{
+text-align: center;
+} 
+div.box1{
+    width: 950px;
+    height: 150px;
+    border: 1px solid black;
+    margin-left: 250px;
+    background-color: rgb(244, 238, 238);
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+.chebtn{
+    margin-left: 230px;
+    margin-top: 12px;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 130px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.mumbtn{
+    margin-left: 230px;
+    margin-top: 12px;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 130px;
+    font-weight: bold;
+    font-size: 18px;
+}
+div.box2 h3{
+    text-align: center;
+    }
+div.box2{
+    width: 950px;
+    height: 250px;
+    border: 1px solid black;
+    margin-left: 250px;
+    margin-top: 40px;
+    background-color: rgb(244, 238, 238);
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+.pnc{
+    margin-left: 200px;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 200px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.pf{
+    margin-left: 200px;
+    margin-top: 12px;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 200px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.cnc{
+    margin-left: 200px;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 200px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.cf{
+    margin-left: 200px;
+    margin-top: 12px;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 200px;
+    font-weight: bold;
+    font-size: 18px;
+}

@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import in.fssa.turf.exception.ServiceException;
 import in.fssa.turf.model.User;
-import in.fssa.turf.model.UserEntity;
+import in.fssa.turf.model.User;
 import in.fssa.turf.service.UserService;
 
 @WebServlet("/users")
@@ -30,7 +30,7 @@ public class ListUsers extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		UserService userService = new UserService();
 		
-		Set<UserEntity> userList = new HashSet<UserEntity>();
+		Set<User> userList = new HashSet<User>();
 		
 			userList = userService.getAll();
 			request.setAttribute("userList", userList);

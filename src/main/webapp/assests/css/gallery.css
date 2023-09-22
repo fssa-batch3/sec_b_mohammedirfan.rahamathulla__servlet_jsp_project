@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2{
+    color: white;
+    margin-left: 700px;
+}
+img{
+    width: 280px;
+    height: 200px;
+    margin-left: 70px;
+    border: 2px solid gray;
+}
+div.set2{
+    margin-top: 10px;
+}
+div.set3{
+    margin-top: 10px;
+}
+div.set4{
+    margin-top: 10px;
+}

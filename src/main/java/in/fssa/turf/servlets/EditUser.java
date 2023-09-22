@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 import in.fssa.turf.exception.PersistenceException;
 import in.fssa.turf.exception.ServiceException;
 import in.fssa.turf.exception.ValidationException;
-import in.fssa.turf.model.UserEntity;
+import in.fssa.turf.model.User;
 import in.fssa.turf.service.UserService;
 
 /**
  * Servlet implementation class EditUser
  */
-@WebServlet("/user/edit")
+@WebServlet("/profile/edit")
 public class EditUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -30,10 +30,10 @@ public class EditUser extends HttpServlet {
 		
 		UserService userService = new UserService();
 		
-		UserEntity user = null;
+		User user = null;
 		
 		try {
-			user = userService.findByUserId(id);
+			user = userService.getById(id);
 			
 			request.setAttribute("userDetails", user);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/update_user.jsp");
@@ -42,11 +42,6 @@ public class EditUser extends HttpServlet {
 		} catch (ValidationException e) {
 			e.printStackTrace();
 			out.println(e.getMessage());
-		} catch (ServiceException e) {   
-			e.printStackTrace();
-			out.println(e.getMessage());
-		} catch (PersistenceException e) {
-			e.printStackTrace();
 		}
 		
 		

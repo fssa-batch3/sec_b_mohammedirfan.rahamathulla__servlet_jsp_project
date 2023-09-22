@@ -71,6 +71,9 @@
         <label for="city">City</label>
         <input type="text" id="city" name="city" required>
         
+        <label for="image">Image url</label>
+        <input type="url" id="image" name="image" required>
+        
         <label for="openinghours">Opening Hours</label>
         <input type="time" id="openinghours" name="openinghours" required>
         

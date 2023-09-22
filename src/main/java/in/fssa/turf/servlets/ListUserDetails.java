@@ -14,7 +14,7 @@ import in.fssa.turf.exception.PersistenceException;
 import in.fssa.turf.exception.ServiceException;
 import in.fssa.turf.exception.ValidationException;
 import in.fssa.turf.model.User;
-import in.fssa.turf.model.UserEntity;
+import in.fssa.turf.model.User;
 import in.fssa.turf.service.UserService;
 
 /**
@@ -35,10 +35,10 @@ public class ListUserDetails extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		UserService userService = new UserService();
-		UserEntity user = null;
+		User user = null;
 		
 		try {
-			user = userService.findByUserId(id);
+			user = userService.getById(id);
 
 			request.setAttribute("userDetails", user);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/user_details.jsp");
@@ -47,11 +47,6 @@ public class ListUserDetails extends HttpServlet {
 		} catch (ValidationException e) {
 			e.printStackTrace();
 			out.println(e.getMessage());
-		} catch (ServiceException e) {
-			e.printStackTrace();
-			out.println(e.getMessage());
-		} catch (PersistenceException e) {
-			e.printStackTrace();
 		}
 		
 		

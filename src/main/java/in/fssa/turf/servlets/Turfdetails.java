@@ -41,4 +41,3 @@ public class Turfdetails extends HttpServlet {
 		}
 
 	}
-

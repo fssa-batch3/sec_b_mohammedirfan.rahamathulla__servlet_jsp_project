@@ -236,6 +236,90 @@
 		<servlet-name>PersonDetails</servlet-name>
 		<servlet-class>in.fssa.turf.servlets.PersonDetails</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>LoginServlet</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>FindAllTurf</display-name>
+		<servlet-name>FindAllTurf</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.FindAllTurf</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>UserRegistration</display-name>
+		<servlet-name>UserRegistration</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.UserRegistration</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>UserProfile</display-name>
+		<servlet-name>UserProfile</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.UserProfile</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Login</display-name>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.Login</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Logout</display-name>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.Logout</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Homepage</display-name>
+		<servlet-name>Homepage</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.Homepage</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Confirmation</display-name>
+		<servlet-name>Confirmation</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.Confirmation</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ProcessFormServlet</display-name>
+		<servlet-name>ProcessFormServlet</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.ProcessFormServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ProcessRequestServlet</display-name>
+		<servlet-name>ProcessRequestServlet</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.ProcessRequestServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ProcessAcceptServlet</display-name>
+		<servlet-name>ProcessAcceptServlet</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.ProcessAcceptServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ListBooking</display-name>
+		<servlet-name>ListBooking</servlet-name>
+		<servlet-class>in.fssa.turf.servlets.ListBooking</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>TurfCreationServlet</servlet-name>
 		<url-pattern>/TurfCreationServlet</url-pattern>
@@ -323,6 +407,54 @@
 	<servlet-mapping>
 		<servlet-name>PersonDetails</servlet-name>
 		<url-pattern>/PersonDetails</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FindAllTurf</servlet-name>
+		<url-pattern>/FindAllTurf</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserRegistration</servlet-name>
+		<url-pattern>/UserRegistration</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserProfile</servlet-name>
+		<url-pattern>/UserProfile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Homepage</servlet-name>
+		<url-pattern>/Homepage</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Confirmation</servlet-name>
+		<url-pattern>/Confirmation</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProcessFormServlet</servlet-name>
+		<url-pattern>/ProcessFormServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProcessRequestServlet</servlet-name>
+		<url-pattern>/ProcessRequestServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProcessAcceptServlet</servlet-name>
+		<url-pattern>/ProcessAcceptServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListBooking</servlet-name>
+		<url-pattern>/ListBooking</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

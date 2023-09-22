@@ -1,6 +1,6 @@
 package in.fssa.turf.servlets;
-
 import java.io.IOException;
+import in.fssa.turf.DatabaseOperations;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -29,6 +29,7 @@ public class CreateUser extends HttpServlet {
         String password = request.getParameter("password");
         String firstname = request.getParameter("firstname");
         String lastname = request.getParameter("lastname");
+        String address = request.getParameter("address");
         String area = request.getParameter("area");
         String city = request.getParameter("city");
 
@@ -36,6 +37,7 @@ public class CreateUser extends HttpServlet {
         user.setPassword(password);
         user.setFirstName(firstname);
         user.setLastName(lastname);
+        user.setAddress(address);
         user.setArea(area);
         user.setCity(city);
         
@@ -44,7 +46,7 @@ public class CreateUser extends HttpServlet {
 
         try {
             userService.create(user);
-            response.sendRedirect(request.getContextPath() + "/turfs");
+            response.sendRedirect(request.getContextPath() + "/login");
 
         } catch (ValidationException e) {
             e.printStackTrace();

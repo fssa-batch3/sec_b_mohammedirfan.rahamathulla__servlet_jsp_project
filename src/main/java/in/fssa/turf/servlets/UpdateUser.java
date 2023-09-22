@@ -17,7 +17,7 @@ import in.fssa.turf.service.UserService;
 /**
  * Servlet implementation class UpdateUser
  */
-@WebServlet("/user/update")
+@WebServlet("/profile/update")
 public class UpdateUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -27,7 +27,7 @@ public class UpdateUser extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		String email = request.getParameter("email"); // Correct the variable name
-        String address = request.getParameter("address");
+        String password = request.getParameter("password");
         String firstname = request.getParameter("firstname");
         String lastname = request.getParameter("lastname");
         String area = request.getParameter("area");
@@ -37,7 +37,7 @@ public class UpdateUser extends HttpServlet {
 		User user = new User();
 		
 		 user.setEmailId(email);
-	        user.setAddress(address);
+	        user.setPassword(password);
 	        user.setFirstName(firstname);
 	        user.setLastName(lastname);
 	        user.setArea(area);
@@ -45,7 +45,7 @@ public class UpdateUser extends HttpServlet {
 	        user.setId(id);
 		try {
 			userService.update(id, user);
-			response.sendRedirect(request.getContextPath()+"/users");
+			response.sendRedirect(request.getContextPath()+"/homepage");
 		} catch (ValidationException e) {
 			e.printStackTrace();
 			out.println(e.getMessage());

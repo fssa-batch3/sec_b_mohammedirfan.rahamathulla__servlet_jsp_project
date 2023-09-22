@@ -28,6 +28,7 @@ public class CreateTurfServlet extends HttpServlet {
 		String address = request.getParameter("address");
 		String area = request.getParameter("area");
 		String city = request.getParameter("city");
+		String image = request.getParameter("image");
 		String openinghours = request.getParameter("openinghours");
 		String closinghours = request.getParameter("closinghours");
 		
@@ -35,13 +36,14 @@ public class CreateTurfServlet extends HttpServlet {
 		turf.setAddress(address);
 		turf.setArea(area);
 		turf.setCity((city));
+		turf.setImage((image));
 		turf.setOpeningHours(openinghours);
 		turf.setClosingHours(closinghours);
 		
 		TurfService turfService = new TurfService();
 		try {
 			turfService.create(turf);
-			response.sendRedirect("turf_details");
+			response.sendRedirect("turfs");
 			System.out.println("Turf is successfully created");
 		} catch (ValidationException e) {
 			e.printStackTrace();
@@ -49,5 +51,4 @@ public class CreateTurfServlet extends HttpServlet {
 		}	
 	}
 }
-
 

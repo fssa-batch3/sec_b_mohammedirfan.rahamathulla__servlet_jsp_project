@@ -1,4 +1,4 @@
-<%@page import="in.fssa.turf.model.UserEntity"%>
+<%@page import="in.fssa.turf.model.User"%>
 <%@page import="in.fssa.turf.model.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -12,7 +12,7 @@
 
 
 	<%
-	UserEntity user = null;
+	User user = null;
 	user = (User) request.getAttribute("userDetails");
 	%>
 

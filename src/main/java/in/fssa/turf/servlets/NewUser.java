@@ -22,7 +22,7 @@ public class NewUser extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/add_user.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/register.jsp");
 		dispatcher.forward(request, response);
 	}
 

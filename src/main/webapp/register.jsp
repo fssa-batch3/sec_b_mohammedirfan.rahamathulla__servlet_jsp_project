@@ -26,16 +26,7 @@
             <label>Password</label>
             <input type="password"  name="password" placeholder="Enter password" required />
           </div>
-        <div class="column">
-          <div class="input-box">   
-            <label>Area</label>
-            <input type="text"  name="area" placeholder=" area" required />
-          </div>
-
-          <div class="input-box">
-            <label>City</label>
-            <input type="text" name="city" placeholder=" city" required />
-          </div>
+        
          
         </div>
         <div class="input-box address">

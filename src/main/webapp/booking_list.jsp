@@ -10,21 +10,51 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+a {
+    text-decoration: none;
+}
+
+</style>
 <body>
 
 		 
 		   <%
+		   String email = (String) request.getSession().getAttribute("logged email");
 		   BookingService bookingService = new BookingServiceImpl();
-		   List<Booking> allBookings = bookingService.getAllBookings();
+		   List<Booking> allBookings = bookingService.getAllBookings(email);
 			%>
 			<table>
 			<thead>
 			<tr>
 			<th>S.no</th>
-			<th>email</th>
-			<th>turfid</th>
-			<th>openinghours</th>
-			<th>closinghours</th>
+			<th>Email</th>
+			<th>Turfid</th>
+			<th>opening Hours</th>
+			<th>Closing Hours</th>
 			<th>Status</th>
 			</tr>
 			

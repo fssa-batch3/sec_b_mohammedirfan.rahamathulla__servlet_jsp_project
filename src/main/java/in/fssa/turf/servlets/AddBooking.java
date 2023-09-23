@@ -51,7 +51,7 @@ public class AddBooking extends HttpServlet {
 System.out.println(booking);
         try {
             bookingService.saveBooking(booking);
-    response.sendRedirect(request.getContextPath() + "/turfs");
+    response.sendRedirect(request.getContextPath() + "/booking_list.jsp");
 
         } catch (Exception e) {
             e.printStackTrace();

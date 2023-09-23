@@ -11,10 +11,6 @@
 
 <% String email = (String) request.getSession().getAttribute("logged email"); %>
 
-   
-
-
-
 <form action=booking/create method="get">
  <label for="email">Email Id:</label>
     <input type="email" id="email" name="email" value="<%=email%>">
@@ -22,14 +18,14 @@
     <label for="turfId">Turf ID:</label>
     <input type="text" id="turfId" name="turfId" value="<%=request.getParameter("turfId") %>"><br><br>
 
-    <label for="fromTime">From Time</label>
-    <input type="time" id="fromTime" name="fromTime" min="00:00" max="23:59">
+<label for="fromTime">From Time</label>
+<input type="time" id="fromTime" name="fromTime" min="00:00" max="23:59" value="<?php echo date('H:i'); ?>">
    
-    <br><br>
+<br><br>
 
-    <label for="toTime">To Time</label>
-    <input type="time" id="toTime" name="toTime" min="00:00" max="23:59">
-   
+<label for="toTime">To Time</label>
+<input type="time" id="toTime" name="toTime" min="00:00" max="23:59" value="<?php echo date('H:i'); ?>">
+
     <br><br>
 
     <label for="date">Select Date:</label>
@@ -40,7 +36,6 @@
 
 
 <style>
-/* Your CSS styling here */
 body {
     font-family: Arial, sans-serif;
     text-align: center;

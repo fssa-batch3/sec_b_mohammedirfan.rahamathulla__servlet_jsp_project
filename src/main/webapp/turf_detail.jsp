@@ -17,6 +17,7 @@
 
 <body>
     <%
+        String email = (String) request.getSession().getAttribute("logged email");
         TurfEntity turf = (TurfEntity) request.getAttribute("turf");
     %>
 
@@ -39,7 +40,7 @@
             <%
                 }
             %>
-            <a href="<%=request.getContextPath()%>/confirm.jsp?userEmail=<%=request.getSession().getAttribute("userEmail")%>&turfId=<%=turf.getId()%>"><button>Book Turf</button></a>
+            <a href="<%=request.getContextPath()%>/confirm.jsp?userEmail=<%=email%>&turfId=<%=turf.getId()%>"><button>Book Turf</button></a>
         </div>
     </section>
 </body>

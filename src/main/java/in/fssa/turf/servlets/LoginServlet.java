@@ -1,5 +1,4 @@
 package in.fssa.turf.servlets;
-import in.fssa.turf.exception.ValidationException;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,8 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import in.fssa.turf.exception.ValidationException;
-import in.fssa.turf.model.User;
 import in.fssa.turf.model.User;
 import in.fssa.turf.service.UserService;
 

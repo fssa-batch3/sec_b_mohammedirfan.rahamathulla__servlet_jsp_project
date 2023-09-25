@@ -26,13 +26,10 @@
             <label>Password</label>
             <input type="password"  name="password" placeholder="Enter password" required />
           </div>
-        
-         
-        </div>
-        <div class="input-box address">
-          <label>Address</label>
-          <input type="text" name="address" placeholder="Enter street address" required />
+
           <button>Submit</button>
+          
+          
       </form>
     </section>
     

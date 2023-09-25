@@ -22,8 +22,8 @@ public class CancelBooking extends HttpServlet {
 		String bookingId = request.getParameter("id");
 		System.out.println("CancelBooking: bookingID:" + bookingId);
 		BookingService bookingService = new BookingServiceImpl();
-		
 		bookingService.updateBookingStatus(Integer.parseInt(bookingId),"CANCELLED");
+		response.sendRedirect( request.getContextPath() + "/booking_list.jsp");
 	
 	}
 

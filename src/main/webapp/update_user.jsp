@@ -40,14 +40,7 @@
 		
 		<br>
 		
-		<label>Area:</label> 
-		<input type="text" value="<%=user.getArea() %>" name="area" required> 
-		
-		<br>
-		
-		<label>City:</label> 
-		<input type="text" value="<%=user.getCity() %>" name="city" required> 
-		
+	
 		<br>
 		
 		<button type="submit">Save</button>

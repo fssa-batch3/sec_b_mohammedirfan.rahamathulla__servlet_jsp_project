@@ -125,10 +125,12 @@ nav ul li a:hover:after {
 		%>
 		<div class="containers">
 			
+					
 			<nav>
+			
 				<ul>
-				 <img src="./assests/Lovi-Logo-removebg-preview.png" alt="" style="width:50px;height:50px;">
-					<li><a href="<%=request.getContextPath()%>/homepage">HOME</a></li>
+				 <li><span class="lovi-text">Lovi Turf</span></li>
+				<li><a href="<%=request.getContextPath()%>/homepage">HOME</a></li>
 					<li><a
 						href="<%=request.getContextPath()%>/user/new">SIGNUP
 							</a></li>
@@ -144,15 +146,6 @@ nav ul li a:hover:after {
 		} else if ("admin123@gmail.com".equals(loggedUserEmail)) {
 		%>
 		
-			
-			<nav>
-				<ul>
-					<li><a href="<%=request.getContextPath()%>/admin">HOME</a></li>
-					<li><a href="<%=request.getContextPath()%>/admin/products">PRODUCTS</a></li>
-					<li><a href="<%=request.getContextPath()%>/admin/product/new">CREATE PRODUCT</a></li>
-					<li><a href="<%=request.getContextPath()%>/profile">PROFILE</a></li>
-				</ul>
-			</nav>
 	
 		<%
 		} else {
@@ -161,6 +154,7 @@ nav ul li a:hover:after {
 			
 			<nav>
 				<ul>
+				 <li><span class="lovi-text">Lovi Turf</span></li>
 					<li><a href="<%=request.getContextPath()%>/homepage">HOME</a></li>
 					<li><a href="<%=request.getContextPath()%>/profile">PROFILE</a></li>
 				</ul>

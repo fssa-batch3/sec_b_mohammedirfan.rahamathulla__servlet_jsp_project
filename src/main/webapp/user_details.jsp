@@ -1,6 +1,6 @@
-<%@page import="in.fssa.turf.model.UserEntity"%>
+<%@page import="in.fssa.turf.model.User"%>
 <%@page import="in.fssa.turf.service.UserService"%>
-<%@page import="in.fssa.turf.model.UserEntity"%>
+<%@page import="in.fssa.turf.model.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ button:hover, a:hover {
 
 	<% UserService userService = new UserService(); %>
 
-	<% UserEntity user = (UserEntity)request.getAttribute("userDetails");%>
+	<% User user = (User)request.getAttribute("userDetails");%>
 
 
 

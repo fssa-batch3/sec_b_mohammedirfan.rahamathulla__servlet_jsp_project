@@ -2,7 +2,7 @@
 <%@page import="java.util.HashSet"%>
 <%@page import="java.util.Set"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="in.fssa.turf.model.UserEntity"%>
+<%@page import="in.fssa.turf.model.User"%>
 <%@page import="java.util.List"%>
 <%@page import="in.fssa.turf.service.UserService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -69,8 +69,8 @@ tr:hover {
 
 	<h1>List of Users</h1>
 	
-	<%Set<UserEntity> userList = new HashSet<UserEntity>();
-	userList = (Set<UserEntity>) request.getAttribute("userList"); 
+	<%Set<User> userList = new HashSet<User>();
+	userList = (Set<User>) request.getAttribute("userList"); 
 	%>
 
 
@@ -85,7 +85,7 @@ tr:hover {
 			<th>View</th>
 		</tr>
 		<%
-		for (UserEntity user1 : userList) {
+		for (User user1 : userList) {
 		%>
 		<tr>
 			<td><%=user1.fullName()%></td>

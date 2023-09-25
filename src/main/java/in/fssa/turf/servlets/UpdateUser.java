@@ -30,8 +30,6 @@ public class UpdateUser extends HttpServlet {
         String password = request.getParameter("password");
         String firstname = request.getParameter("firstname");
         String lastname = request.getParameter("lastname");
-        String area = request.getParameter("area");
-        String city = request.getParameter("city");
 		int id = Integer.parseInt(request.getParameter("userId"));
 		
 		User user = new User();
@@ -40,8 +38,6 @@ public class UpdateUser extends HttpServlet {
 	        user.setPassword(password);
 	        user.setFirstName(firstname);
 	        user.setLastName(lastname);
-	        user.setArea(area);
-	        user.setCity(city);
 	        user.setId(id);
 		try {
 			userService.update(id, user);

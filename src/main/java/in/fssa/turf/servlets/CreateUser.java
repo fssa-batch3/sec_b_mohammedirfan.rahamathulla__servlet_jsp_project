@@ -29,17 +29,11 @@ public class CreateUser extends HttpServlet {
         String password = request.getParameter("password");
         String firstname = request.getParameter("firstname");
         String lastname = request.getParameter("lastname");
-        String address = request.getParameter("address");
-        String area = request.getParameter("area");
-        String city = request.getParameter("city");
 
         user.setEmailId(email);
         user.setPassword(password);
         user.setFirstName(firstname);
         user.setLastName(lastname);
-        user.setAddress(address);
-        user.setArea(area);
-        user.setCity(city);
         
         System.out.println(user); 
         

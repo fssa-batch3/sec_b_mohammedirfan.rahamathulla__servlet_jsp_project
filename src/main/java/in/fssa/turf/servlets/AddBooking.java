@@ -1,4 +1,5 @@
 package in.fssa.turf.servlets;
+
 import java.io.IOException;
 import in.fssa.turf.DatabaseOperations;
 import java.io.PrintWriter;
@@ -20,42 +21,43 @@ import in.fssa.turf.service.UserService;
 
 @WebServlet("/booking/create")
 public class AddBooking extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doPost(request, response);
+	}
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-    	doPost(request, response);
-    }
-    
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-    		BookingService bookingService = new BookingServiceImpl();
-    		Booking booking = new Booking();
-    		 PrintWriter out = response.getWriter();
-    		String email = request.getParameter("email");
-            String turfid = request.getParameter("turfId");
-            String openinghours = request.getParameter("fromTime");
-            String closinghours = request.getParameter("toTime");
-            String gamedate = request.getParameter("gamedate");
-            String status = request.getParameter("Status");
-    		
-    		booking.setUseremail(email);
-    		booking.setTurfid(Integer.parseInt(turfid));
-    		booking.setOpeninghours(openinghours);
-    		booking.setClosinghours(closinghours);
-    		booking.setGameDate(LocalDate.parse(gamedate));
-    		booking.setStatus("BOOKED");
-    
-System.out.println(booking);
-        try {
-            bookingService.saveBooking(booking);
-    response.sendRedirect(request.getContextPath() + "/booking_list.jsp");
+		BookingServiceImpl bookingService = new BookingServiceImpl();
+		Booking booking = new Booking();
+		PrintWriter out = response.getWriter();
+		String email = request.getParameter("email");
+		String turfid = request.getParameter("turfId");
+		String openinghours = request.getParameter("fromTime");
+		String closinghours = request.getParameter("toTime");
+		String gamedate = request.getParameter("gamedate");
+		String status = request.getParameter("Status");
+		System.out.println(gamedate);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-            out.println("Validation Error: " + e.getMessage());
-        }
-    }
+		booking.setUseremail(email);
+		booking.setTurfid(Integer.parseInt(turfid));
+		booking.setOpeninghours(openinghours);
+		booking.setClosinghours(closinghours);
+		booking.setGameDate(gamedate);
+
+		booking.setStatus("BOOKED");
+
+		System.out.println(booking);
+		try {
+			bookingService.saveBooking(booking);
+			response.sendRedirect(request.getContextPath() + "/booking_list.jsp");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.println("Validation Error: " + e.getMessage());
+		}
+	}
 }

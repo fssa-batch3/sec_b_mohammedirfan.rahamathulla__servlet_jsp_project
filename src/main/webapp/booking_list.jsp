@@ -3,7 +3,7 @@
 <%@page import="in.fssa.turf.service.BookingServiceImpl"%>
 <%@page import="in.fssa.turf.service.BookingService"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,74 +12,79 @@
 </head>
 <style>
 table {
-    border-collapse: collapse;
-    width: 100%;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
+	border: 1px solid black;
+	padding: 8px;
+	text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+	background-color: #f2f2f2;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+	background-color: #f2f2f2;
 }
 
 tr:hover {
-    background-color: #ddd;
+	background-color: #ddd;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
-
 </style>
 <body>
 
-		 
-		   <%
-		   String email = (String) request.getSession().getAttribute("logged email");
-		   BookingService bookingService = new BookingServiceImpl();
-		   List<Booking> allBookings = bookingService.getAllBookings(email);
-			%>
-			<table>
-			<thead>
+
+	<%
+	String date = (String) session.getAttribute("date");
+	String email = (String) request.getSession().getAttribute("logged email");
+	BookingServiceImpl bookingService = new BookingServiceImpl();
+	List<Booking> allBookings = bookingService.getAllBookings(email);
+	%>
+	<table>
+		<thead>
 			<tr>
-			<th>S.no</th>
-			<th>Email</th>
-			<th>Turfid</th>
-			<th>opening Hours</th>
-			<th>Closing Hours</th>
-			<th>Status</th>
+				<th>S.no</th>
+				<th>Email</th>
+				<th>Turfid</th>
+				<th>opening Hours</th>
+				<th>Closing Hours</th>
+				<th>Game Date</th>
+				<th>Status</th>
 			</tr>
-			
-			</thead>
-			<tbody>
+
+		</thead>
+		<tbody>
 			<%
-			for (Booking booking : allBookings) {%>
+			for (Booking booking : allBookings) {
+			%>
 			<tr>
-			<td><%=booking.getId() %></td>
-			<td><%=booking.getUseremail() %></td>
-			<td><%=booking.getTurfid() %></td>
-			<td><%=booking.getOpeninghours() %></td>
-			<td><%=booking.getClosinghours() %></td>
-			<td><%=booking.getStatus() %></td>
-			<td><a href="CancelBooking?id=<%=booking.getId()%>">Cancel</a></td>
+				<td><%=booking.getId()%></td>
+				<td><%=booking.getUseremail()%></td>
+				<td><%=booking.getTurfid()%></td>
+				<td><%=booking.getOpeninghours()%></td>
+				<td><%=booking.getClosinghours()%></td>
+				<td><%=booking.getGameDate()%></td>
+				<td><%=booking.getStatus()%></td>
+				<td><a href="CancelBooking?id=<%=booking.getId()%>">Cancel</a></td>
 			</tr>
-				
-				 
-			<% }%>
-			
-	
-			</tbody>
-			</table>
-		       
-			
-			
+
+
+			<%
+			}
+			%>
+
+
+		</tbody>
+	</table>
+
+
+
 </body>
 </html>

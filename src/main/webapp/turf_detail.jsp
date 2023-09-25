@@ -10,7 +10,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Turf Detail</title>   <jsp:include page="header.jsp"></jsp:include>`
+    <title>Turf Detail</title>  
+     <jsp:include page="header.jsp"></jsp:include>`
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assests/css/details.css">
 
 </head>
@@ -43,5 +44,10 @@
             <a href="<%=request.getContextPath()%>/confirm.jsp?userEmail=<%=email%>&turfId=<%=turf.getId()%>"><button>Book Turf</button></a>
         </div>
     </section>
+    
+    <style>
+
+    
+    </style>
 </body>
 </html>

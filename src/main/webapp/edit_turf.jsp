@@ -1,90 +1,43 @@
 <%@page import="in.fssa.turf.model.TurfEntity"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-    
-    .form-container {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-        width: 300px;
-    }
-    
-    .form-container form {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .form-container label {
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-    
-    .form-container input[type="text"] {
-        padding: 8px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-    }
-    
-    .form-container button {
-        padding: 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-    
-    .form-container button:hover {
-        background-color: #0056b3;
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>Edit Turf Details</title>
+    <style>
+        /* Your CSS styles go here */
+    </style>
 </head>
 <body>
+    <%
+    TurfEntity turf = (TurfEntity) request.getAttribute("editTurf");
+    %>
 
-<%TurfEntity turf = (TurfEntity) request.getAttribute("editTurf");%>
+    <h1>Edit Turf Details</h1>
+    <div class="form-container">
+        <form action="update?id=<%=turf.getId() %>" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="<%=turf.getName() %>" required>
+            
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" value="<%=turf.getAddress() %>" required>
+            
+            <label for="area">Area</label>
+            <input type="text" id="area" name="area" value="<%=turf.getArea() %>" required>
+            
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" value="<%=turf.getCity() %>" required>
+          
+            <label for="openinghours">Opening Hours</label>
+            <input type="time" id="openinghours" name="openinghours" value="<%=turf.getOpeningHours() %>" required>
 
-<h1>Edit Turf Details</h1>
-<div class="form-container">
-    <form action="update?id=<%=turf.getId() %>" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" value= "<%=turf.getName() %>" required>
-        
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" value = "<%=turf.getAddress() %>" required>
-        
-        <label for="area">Area</label>
-        <input type="text" id="area" name="area"  value = "<%=turf.getArea() %>" required>
-        
-        <label for="city">City</label>
-        <input type="text" id="city" name="city"  value = "<%=turf.getCity() %>" required>
-      
-      <label for="openinghours">Opening Hours</label>
-      <input type="time" id="openinghours" name="openinghours" value="<%=turf.getOpeningHours() %>" required>
-
-     <label for="closinghours">Closing Hours</label>
-     <input type="time" id="closinghours" name="closinghours" value="<%=turf.getClosingHours() %>" required>
-
-        
-        <button type="submit">Update</button>
-    </form>
-</div>
+            <label for="closinghours">Closing Hours</label>
+            <input type="time" id="closinghours" name="closinghours" value="<%=turf.getClosingHours() %>" required>
+            
+            <button type="submit">Update</button>
+        </form>
+    </div>
 </body>
 </html>

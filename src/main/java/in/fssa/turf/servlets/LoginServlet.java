@@ -30,28 +30,36 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");
+		
+		
+		System.out.println("User MailId Checking "+email);
 		String password = request.getParameter("password");
 		
-		in.fssa.turf.service.UserService userService = new UserService();
+	UserService userService = new UserService();
 		
 		User user;
 		try {
 			user = userService.getByEmail(email);
-			System.out.println(user);
+			System.out.println("User getByEmail returns "+user);
+			
+			HttpSession login = request.getSession();
+			if(password.equals(user.getPassword())) {
+				login.setAttribute("logged email", email);
+				System.out.println("logged email");
+				login.setAttribute("logged user", user);
+				login.setAttribute("logged user id", user.getId());
+				
+				response.getWriter().println("User logged in successfully");
+				response.sendRedirect(request.getContextPath()+"/homepage");
+			}else {
+				throw new RuntimeException("Incorrect password");
+			}
+			
+			
 		}catch(in.fssa.turf.exception.ValidationException e) {
 			throw new RuntimeException("no user exists");
 		}
-		HttpSession login = request.getSession();
-		if(password.equals(user.getPassword())) {
-			login.setAttribute("logged email", email);
-			login.setAttribute("logged user", user);
-			login.setAttribute("logged user id", user.getId());
-			
-			response.getWriter().println("User logged in successfully");
-			response.sendRedirect(request.getContextPath()+"/homepage");
-		}else {
-			throw new RuntimeException("Incorrect password");
-		}
+		
 	}
 
 }

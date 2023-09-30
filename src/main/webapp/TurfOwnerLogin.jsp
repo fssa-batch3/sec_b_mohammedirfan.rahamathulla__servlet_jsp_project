@@ -9,22 +9,21 @@
   <body>
     <section class="container">
       <header>Login Form</header>
-      <form action="login" class="form" method="POST">
+      <form action="TurfOwnerLogin" class="form" method="POST">
      
         <div class="input-box">
           <label>Email Address</label>
-          <input type="text" name="email" placeholder="Enter email address" value="kareem@gmail.com"required />
+          <input type="text" name="email" placeholder="Enter email address" value="kareem@gmail.com" required />
         </div>
         <div class="input-box">
             <label>Password</label>
-            <input type="password" name="password" placeholder="Enter password" value="Kareem@12"required />
+            <input type="password" name="password" placeholder="Enter password" value="Kareem@12" required />
           </div>
                  <button type="submit">Login</button>
       </form>
     </section>
     
     <style>
-    /* Add this CSS to your login.css file */
 
 body {
   font-family: Arial, sans-serif;

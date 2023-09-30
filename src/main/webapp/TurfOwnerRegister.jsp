@@ -4,27 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../../assests/css/login.css" />
+    <link rel="stylesheet" href="../../assests/css/register.css" />
   </head>
   <body>
     <section class="container">
-      <header>Login Form</header>
-      <form action="login" class="form" method="POST">
-     
+      <header>Registration Form</header>
+      <form action="create" class="form" method="POST">
+       
+        <div class="input-box">
+            <label> Name</label>
+            <input type="text" name="name" placeholder="Enter name" required />
+         </div>
         <div class="input-box">
           <label>Email Address</label>
-          <input type="text" name="email" placeholder="Enter email address" value="kareem@gmail.com"required />
+          <input type="text" name="email" placeholder="Enter email address" required />
         </div>
         <div class="input-box">
             <label>Password</label>
-            <input type="password" name="password" placeholder="Enter password" value="Kareem@12"required />
-          </div>
-                 <button type="submit">Login</button>
+            <input type="password"  name="password" placeholder="Enter password" required />
+        </div>
+
+          <button>Submit</button>
+          
+          
       </form>
     </section>
     
     <style>
-    /* Add this CSS to your login.css file */
 
 body {
   font-family: Arial, sans-serif;
@@ -33,7 +39,7 @@ body {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 600px;
   margin: 100px auto;
   background-color: #fff;
   padding: 20px;
@@ -81,6 +87,15 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address {
+  grid-column: span 2;
 }
 
 @media (max-width: 480px) {

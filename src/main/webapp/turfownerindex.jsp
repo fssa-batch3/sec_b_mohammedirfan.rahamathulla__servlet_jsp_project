@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
+<!-- Created By CodingNepal -->
 <html lang="en">
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
+    <title>TurfOwner Homepage</title>
     <link rel="stylesheet" href="./assests/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -19,15 +20,14 @@
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
-     <jsp:include page="OwnersHeader.jsp"></jsp:include>
-     <section class="home" id="home">
- 
+    <jsp:include page="ownerHeader.jsp"></jsp:include>
+    <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
                 <div class="text-1">Hello</div>
                 <div class="text-2">Welcome to Lovi Turf</div>
-                 <a href="add_turf.jsp">Create turf</a>
-                 <a href="userlist.jsp">User list</a>
+                 <a href="#">User List</a>
+                 <a href="/add_turf">Create Turf</a>
                  
             </div>
         </div>

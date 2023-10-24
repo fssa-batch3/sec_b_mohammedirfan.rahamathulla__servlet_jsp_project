@@ -8,21 +8,22 @@
   </head>
   <body>
     <section class="container">
-      <header>Registration Form</header>
+      <header>Turfowner Registration Form</header>
       <form action="create" class="form" method="POST">
-       
         <div class="input-box">
-            <label> Name</label>
-            <input type="text" name="name" placeholder="Enter name" required />
-         </div>
+          <label> Name</label>
+          <input type="text" name="name" placeholder="Enter your name" required />
+        </div>
+     
         <div class="input-box">
           <label>Email Address</label>
-          <input type="text" name="email" placeholder="Enter email address" required />
+          <input type="email" name="email" placeholder="Enter email address" required />
         </div>
+        
         <div class="input-box">
             <label>Password</label>
             <input type="password"  name="password" placeholder="Enter password" required />
-        </div>
+          </div>
 
           <button>Submit</button>
           

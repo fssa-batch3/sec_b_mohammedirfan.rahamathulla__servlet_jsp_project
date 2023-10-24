@@ -22,7 +22,7 @@ public class NewTurfOwner extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/TurfOwnerRegister.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/turfOwnerRegister.jsp");
 		dispatcher.forward(request, response);
 	}
 

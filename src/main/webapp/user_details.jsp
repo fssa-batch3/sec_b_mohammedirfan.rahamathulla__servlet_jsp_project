@@ -60,8 +60,6 @@ button:hover, a:hover {
 		<h1><%= user.fullName() %></h1>
 		<p class="title"><%= user.getEmailId() %></p>
 		<p><%=user.getPassword() %></p>
-		<p><%=user.getArea() %></p>
-		<p><%=user.getCity() %></p>
 		
 		<p>
 			<button>Contact</button>

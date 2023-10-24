@@ -1,13 +1,12 @@
 <%@page import="in.fssa.turf.model.TurfOwner"%>
 <%@page import="in.fssa.turf.model.TurfOwner"%>
-<%@page import="in.fssa.turf.model.TurfOwner"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Turfowner Header</title>
 <style>
 header {
 	width: 100%;
@@ -115,11 +114,11 @@ nav ul li a:hover:after {
 	<header>
 		<%
 		String loggedTurfOwnerEmail = (String) request.getSession().getAttribute("logged email");
-		
+		System.out.println(loggedTurfOwnerEmail);
 		%>
 		<%
 		TurfOwner loggedTurfOwner = (TurfOwner) request.getSession().getAttribute("logged turfowner");
-		
+		System.out.println(loggedTurfOwner);
 		%>
 		<%
 		if (loggedTurfOwner == null) {
@@ -131,12 +130,12 @@ nav ul li a:hover:after {
 			
 				<ul>
 				 <li><span class="lovi-text">Lovi Turf</span></li>
-				<li><a href="<%=request.getContextPath()%>/TurfOwnerHomePagehomepage">HOME</a></li>
+				<li><a href="<%=request.getContextPath()%>/homepage">HOME</a></li>
 					<li><a
 						href="<%=request.getContextPath()%>/turfowner/new">SIGNUP
 							</a></li>
 					<li><a
-						href="<%=request.getContextPath()%>/TurfOwnerLogin">LOG
+						href="<%=request.getContextPath()%>/turfownerlogin">LOG
 							IN</a></li>
 							
 							
@@ -156,7 +155,7 @@ nav ul li a:hover:after {
 			<nav>
 				<ul>
 				 <li><span class="lovi-text">Lovi Turf</span></li>
-					<li><a href="<%=request.getContextPath()%>/homepage">HOME</a></li>
+					<li><a href="<%=request.getContextPath()%>/TurfOwnerHomePage">HOME</a></li>
 					<li><a href="<%=request.getContextPath()%>/ownerprofile">PROFILE</a></li>
 				</ul>
 			</nav>

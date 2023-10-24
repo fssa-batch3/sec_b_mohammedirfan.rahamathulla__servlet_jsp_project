@@ -59,6 +59,10 @@
 <h1>Add Turf Details</h1>
 <div class="form-container">
     <form action="add_turf" method="POST">
+    
+        <label for="name">Turf Id</label>
+        <input type="number" id="id" name="id" required>
+        
         <label for="name">Turf Name</label>
         <input type="text" id="name" name="name" required>
         

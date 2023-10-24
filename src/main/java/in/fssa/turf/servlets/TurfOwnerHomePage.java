@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HomepageServlet
  */
-@WebServlet("/OwnerHomePage")
+@WebServlet("/turfownerhomepage")
 public class TurfOwnerHomePage extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -21,7 +21,7 @@ public class TurfOwnerHomePage extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		RequestDispatcher rd = request.getRequestDispatcher("/turfownerindex.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/turfOwnerIndex.jsp");
 		rd.forward(request, response);
 	}
 

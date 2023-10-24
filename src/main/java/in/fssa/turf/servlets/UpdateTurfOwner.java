@@ -17,29 +17,28 @@ import in.fssa.turf.service.TurfOwnerService;
 /**
  * Servlet implementation class UpdateUser
  */
-@WebServlet("/ownerprofile/update")
-public class UpdateOwner extends HttpServlet {
+@WebServlet("/turfownerprofile/update")
+public class UpdateTurfOwner extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		TurfOwnerService turfOwnerService = new TurfOwnerService();
 		PrintWriter out = response.getWriter();
-		
-		String name = request.getParameter("name"); // Correct the variable name
-        String email = request.getParameter("email");
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
         String password = request.getParameter("password");
-		int id = Integer.parseInt(request.getParameter("turfownerid"));
-		System.out.println(id);
-		TurfOwnerService turfowner = new TurfOwnerService();
+		int id = Integer.parseInt(request.getParameter("turfOwnerId"));
 		
+		TurfOwner turfowner = new TurfOwner();
 		turfowner.setName(name);
 		turfowner.setEmail(email);
 		turfowner.setPassword(password);
+		
 	        turfowner.setId(id);
 		try {
 			turfOwnerService.update(id, turfowner);
-			response.sendRedirect(request.getContextPath()+"/TurfOwnerHomePage");
+			response.sendRedirect(request.getContextPath()+"/turfownerprofile");
 		} catch (ValidationException e) {
 			e.printStackTrace();
 			out.println(e.getMessage());

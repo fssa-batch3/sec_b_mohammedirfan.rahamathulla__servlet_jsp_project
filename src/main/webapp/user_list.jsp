@@ -91,8 +91,6 @@ tr:hover {
 			<td><%=user1.fullName()%></td>
 			<td><%=user1.getEmailId()%></td>
 			<td><%=user1.getPassword()%></td>
-			<td><%=user1.getArea()%></td>
-			<td><%=user1.getCity()%></td>
 			<td>
 				<a href="users/details?userId=<%= user1.getId()%>">
 					<button class="view" type="submit">View</button>

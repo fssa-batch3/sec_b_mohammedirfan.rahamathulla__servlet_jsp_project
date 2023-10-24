@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Profile Page</title>
+<title>Turfowner Profile Page</title>
 <style>
 body {
 	font-family: Arial, sans-serif;
@@ -20,9 +20,8 @@ body {
 }
 
 header {
-	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08)
-		0px 0px 0px 1px;
-	background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: white;
 }
 
 .profile_container {
@@ -88,25 +87,24 @@ p {
 </style>
 </head>
 <body>
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="ownerHeader.jsp"></jsp:include>
 
-	<%-- <%
-	User loggedUser = (User) request.getSession().getAttribute("logged user");
-	%> --%>
-
-	<%
+	
+	<% 
 	TurfOwner turfowner = (TurfOwner) request.getAttribute("turfOwnerDetails");
-
-	if (turfowner != null) {
-	%>
-
+	
+	if(turfowner!=null){
+	
+	%>	
+	
 	<div class="profile_container">
 		<h2>PROFILE DETAILS</h2>
 		<div class="profile_details">
 			<div>
-				<h4>NAME</h4>
-				<p><%=turfowner.getName()%></p>
+				<h4> NAME</h4>
+				<p><%=turfowner.getName() %></p>
 			</div>
+			
 			<div>
 				<h4>EMAIL</h4>
 				<p><%=turfowner.getEmail()%></p>
@@ -115,15 +113,12 @@ p {
 				<h4>PASSWORD</h4>
 				<p><%=turfowner.getPassword()%></p>
 			</div>
-			<div class="button_container">
-				<a href="ownerprofile/edit?turfOwnerId=<%=turfowner.getId()%>"><button>Edit</button></a>
-				<a href="ownerprofile/logout"><button>Log Out</button></a>
-			</div>
+		<div class="button_container">
+			<a href = "profile/edit?turfOwnerId=<%=turfowner.getId()%>"><button>Edit</button></a>
+			<a href = "profile/logout"><button>Log Out</button></a>
 		</div>
-
-		<%
-		}
-		%>
+	</div>
 	
+	<%} %>
 </body>
 </html>

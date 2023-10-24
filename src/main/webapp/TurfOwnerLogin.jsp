@@ -8,16 +8,16 @@
   </head>
   <body>
     <section class="container">
-      <header>Login Form</header>
-      <form action="TurfOwnerLogin" class="form" method="POST">
+      <header>Turfowner Login Form</header>
+      <form action="login" class="form" method="POST">
      
         <div class="input-box">
           <label>Email Address</label>
-          <input type="text" name="email" placeholder="Enter email address" value="kareem@gmail.com" required />
+          <input type="email" name="email" placeholder="Enter email address" required />
         </div>
         <div class="input-box">
             <label>Password</label>
-            <input type="password" name="password" placeholder="Enter password" value="Kareem@12" required />
+            <input type="password" name="password" placeholder="Enter password" required />
           </div>
                  <button type="submit">Login</button>
       </form>

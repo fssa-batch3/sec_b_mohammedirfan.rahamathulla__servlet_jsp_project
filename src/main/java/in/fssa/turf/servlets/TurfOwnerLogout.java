@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/ownerprofile/logout")
-public class TurfOwnerLogoutServlet extends HttpServlet {
+@WebServlet("/turfownerprofile/logout")
+public class TurfOwnerLogout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		HttpSession session = request.getSession();
-		String attributeName = "loggedUser";
-		String attributeEmail = "loggedUserEmail";
+		String attributeName = "loggedTurfOwner";
+		String attributeEmail = "loggedTurfOwnerEmail";
 		session.removeAttribute(attributeName);
 		session.removeAttribute(attributeEmail);
 		session.invalidate();
 
-		response.sendRedirect(request.getContextPath() + "/TurfOwnerHomepage");
+		response.sendRedirect(request.getContextPath() + "/turfownerhomepage");
 	}
 
 }

@@ -19,14 +19,14 @@ import in.fssa.turf.service.TurfOwnerService;
 /**
  * Servlet implementation class EditUser
  */
-@WebServlet("/ownerprofile/edit")
-public class TurfOwnerEdit extends HttpServlet {
+@WebServlet("/turfownerprofile/edit")
+public class EditTurfOwner extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PrintWriter out = response.getWriter();
-		int id = Integer.parseInt(request.getParameter("turfOwnerId"));
+		int id = Integer.parseInt(request.getParameter("userId"));
 		
 		TurfOwnerService turfOwnerService = new TurfOwnerService();
 		
@@ -35,7 +35,7 @@ public class TurfOwnerEdit extends HttpServlet {
 		turfowner = turfOwnerService.getById(id);
 		
 		request.setAttribute("turfOwnerDetails", turfowner);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/updateowner.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/turfOwnerUpdateProfile.jsp");
 		dispatcher.forward(request, response);
 		
 		

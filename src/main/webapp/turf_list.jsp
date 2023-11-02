@@ -1,4 +1,4 @@
-<%@page import="java.util.List"%>
+`	<%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Set"%>
 <%@page import="in.fssa.turf.service.TurfService"%>
@@ -30,6 +30,7 @@
         <div class="product-item">
             <img src="<%=turf.getImage() %>" alt="Product 1">
             <h3><%=turf.getName() %></h3>
+            <h3><%=turf.getCity() %></h3>
             <br>
             <a href="<%=request.getContextPath()%>/turf_detail?id=<%=turf.getId()%>"><button>View Turf</button></a>
         </div>

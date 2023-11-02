@@ -60,8 +60,7 @@
 <div class="form-container">
     <form action="add_turf" method="POST">
     
-        <label for="name">Turf Id</label>
-        <input type="number" id="id" name="id" required>
+        
         
         <label for="name">Turf Name</label>
         <input type="text" id="name" name="name" required>
@@ -79,10 +78,10 @@
         <input type="url" id="image" name="image" required>
         
         <label for="openinghours">Opening Hours</label>
-        <input type="time" id="openinghours" name="openinghours" required>
+        <input type="time" id="openinghours" name="openinghours"  min="18:00" max="22:00" required>
         
         <label for="closinghours">Closing Hours</label>
-        <input type="time" id="closinghours" name="closinghours" required>
+        <input type="time" id="closinghours" name="closinghours"  min="18:00" max="22:00" required>
         
         <button type="submit">Submit</button>
     </form>

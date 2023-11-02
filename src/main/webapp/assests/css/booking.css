@@ -1,4 +1,4 @@
-body{
+*{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 h2{
@@ -93,4 +93,32 @@ div.box2{
     width: 200px;
     font-weight: bold;
     font-size: 18px;
+}
+
+        /* Add some basic styling to the table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style the table header */
+th {
+    background-color: #f2f2f2;
+}
+
+/* Add some padding to the table cells */
+td {
+    padding: 12px;
+}
+
+/* Style the "Cancel" link */
+a {
+    color: #ff0000; /* Red color for the link */
+    text-decoration: none;
 }

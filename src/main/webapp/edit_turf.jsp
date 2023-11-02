@@ -6,9 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Turf Details</title>
-    <style>
-        /* Your CSS styles go here */
-    </style>
+   
 </head>
 <body>
     <%

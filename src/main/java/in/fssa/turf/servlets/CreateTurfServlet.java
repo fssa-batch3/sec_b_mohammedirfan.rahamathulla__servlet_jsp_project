@@ -31,7 +31,7 @@ public class CreateTurfServlet extends HttpServlet {
         String image = request.getParameter("image");
         String openinghours = request.getParameter("openinghours");
         String closinghours = request.getParameter("closinghours");
-        int id = Integer.parseInt(request.getParameter("id")); // Parse 'id' to int
+        //int id = Integer.parseInt(request.getParameter("id")); // Parse 'id' to int
 
 
         turf.setName(name);
@@ -41,7 +41,7 @@ public class CreateTurfServlet extends HttpServlet {
         turf.setImage(image); // Removed unnecessary brackets
         turf.setOpeningHours(openinghours);
         turf.setClosingHours(closinghours);
-        turf.setTurfownerid(id);
+        turf.setTurfownerid(1); //hardcoded temporarily
 
 
         TurfService turfService = new TurfService();

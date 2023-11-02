@@ -1,3 +1,4 @@
+
 <%@ page import="in.fssa.turf.model.Booking" %>
 <%@ page import="java.util.List" %>
 <%@ page import="in.fssa.turf.service.BookingServiceImpl" %>
@@ -9,6 +10,7 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
+   
     <title>Bookings</title>
     <style>
         /* Add some basic styling to the table */
@@ -48,6 +50,7 @@ a {
         BookingService bookingService = new BookingServiceImpl();
         List<Booking> allBookings = bookingService.findAllBookingByUserEmail( (String) request.getSession().getAttribute("logged email"));
     %>
+    <h1>List of Bookings</h1> <!-- Add this line for the heading -->
     <table>
         <thead>
             <tr>
@@ -73,12 +76,20 @@ a {
                 <td><%=booking.getClosinghours()%></td>
                 <td><%=booking.getGameDate()%></td>
                 <td><%=booking.getStatus()%></td>
-                <td><a href="CancelBooking?id=<%=booking.getId()%>">Cancel</a></td>
-            </tr>
-            <%
-            }
-            %>
-        </tbody>
-    </table>
+                <td>
+  
+        <% 
+        if (!booking.getStatus().equals("CANCELLED")) {
+        %>
+        <a href="CancelBooking?id=<%=booking.getId()%>">Cancel</a>
+        <%
+        }
+        %>
+    </td>
+</tr>
+<%
+}
+%>
+        </tbody> 
 </body>
 </html>

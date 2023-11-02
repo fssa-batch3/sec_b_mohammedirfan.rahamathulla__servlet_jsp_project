@@ -16,7 +16,7 @@
 
 <body>
 <style>
-    body {
+    * {
         background-color: #000;
         color: #fff;
         font-family: Arial, sans-serif;
@@ -43,13 +43,14 @@
 
     .card img {
         width: 100%;
-        max-height: 200px;
+        max-height: 430px;
         object-fit: cover;
         border-radius: 5px;
     }
 
     h2, p {
         margin: 10px 0;
+        background-color: #343232;
     }
 
     button {
@@ -60,7 +61,7 @@
         border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
-        margin-top: 370px;
+        margin-top: 650px;
         margin-left:-425px;
     }
 
@@ -71,17 +72,22 @@
     %>
  <jsp:include page="header.jsp"></jsp:include>
     <section>
-    <jsp:include page="header.jsp"></jsp:include>
+   
         <div class="card-wrapper">
             <%
                 if(turf != null){
             %>
                 <div class="card">
                     <img src="<%=turf.getImage() %>" alt="Product 1"/>
-                    <h2><%=turf.getName() %></h2>
+                    <h2>Turf name :</h2>
+                    <p><%=turf.getName() %></p>
+                    <h2>Turf address :</h2>
                     <p><%=turf.getAddress() %></p>
+                    <h2>Turf city :</h2>
                     <p><%=turf.getCity() %></p>
+                    <h2>Opening hours :</h2>
                     <p><%=turf.getOpeningHours() %></p>
+                      <h2>Closing hours :</h2>
                     <p><%=turf.getClosingHours() %></p>
                     <br>
                 </div>

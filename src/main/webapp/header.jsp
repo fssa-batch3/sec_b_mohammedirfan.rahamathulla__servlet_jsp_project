@@ -6,15 +6,19 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Header</title>
 <style>
 header {
-	width: 100%;
-	top: 0;
-	color: black;
-	z-index: 10;
-	position: absolute;
+    width: 100%;	
+    top: 0;
+    color: black;
+    z-index: 10;
+    position: absolute;
+    background-color: gray; /* Set your desired background color */
+    border-bottom: 1px solid #ccc; /* Add a border at the bottom */
+    padding: 10px; /* Add some padding to the header */
 }
+
 
 h1 {
 	font-family: 'Catamran', sans-serif;
@@ -31,9 +35,8 @@ p {
 a {
 	font-family: 'Telex', sans-serif;
 	font-size: 20px;
+	color: white;
 }
-
-
 
 .containers div:nth-of-type(2) {
 	flex: 1;
@@ -49,6 +52,7 @@ nav ul {
 	list-style: none;
 	margin-left: auto;
 	justify-content: flex-end;
+	background-color: gray;
 }
 
 nav ul li {
@@ -56,6 +60,7 @@ nav ul li {
 	border-radius: 20px;
 	border: none;
 	align-items: center;
+	background-color: gray;
 }
 
 nav ul li a {
@@ -63,6 +68,7 @@ nav ul li a {
 	text-decoration: none;
 	color: white;
 	font-weight: normal;
+	background-color: gray;
 }
 
 nav ul li a:after {
@@ -78,6 +84,15 @@ nav ul li a:after {
 
 nav ul li a:hover:after {
 	width: 100%;
+}
+
+.lovi-text {
+    color: white;
+    font-size: 25px;
+    margin-top: 6px;
+    margin-left: -1055px;
+    position: relative;
+    background-color: gray;
 }
 
 @media only screen and (max-width:700px) {

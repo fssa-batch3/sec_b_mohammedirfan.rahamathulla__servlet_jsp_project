@@ -1,4 +1,4 @@
-body {
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -11,6 +11,7 @@ body {
   margin-top: 6px;
   margin-left: -1055px;
   position: relative;
+  background-color: gray;
 }
 .max-width{
     max-width: 1300px;
@@ -36,6 +37,10 @@ body {
   justify-content: space-around;
   padding: 20px;
   margin-top:25px;
+}
+
+h3{
+	color: white;
 }
 
 .product-item {
@@ -73,5 +78,3 @@ body {
 .product-item button:hover {
   background-color: #0056b3;
 }
-
-/* Additional styles can be added here if needed */
